@@ -12,16 +12,16 @@ body {
 }
 
 .grid-container {
-  max-width: 700px;
   height: 100vh;
+  width: 70vh;
   margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 3fr;
       grid-template-columns: 3fr 3fr;
-  -ms-grid-rows: 1fr  4fr  1fr  2fr;
-      grid-template-rows: 1fr  4fr  1fr  2fr;
-      grid-template-areas: 'header  profile' 'main    profile' 'footer  footer' 'footer  footer';
+  -ms-grid-rows: 2fr  2fr  1fr  2fr;
+      grid-template-rows: 2fr  2fr  1fr  2fr;
+      grid-template-areas: 'header  profile' 'header  profile' 'footer  footer' 'footer  footer';
 }
 
 .grid-container .card {
@@ -138,25 +138,103 @@ body {
 }
 
 .grid-container .header {
-  background: #0e153a;
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: header;
-  margin-left: -2em;
-  margin-top: -2em;
-  padding-top: 3em;
-  padding-left: 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr  2fr  2fr 2fr;
+      grid-template-rows: 1fr  2fr  2fr 2fr;
+      grid-template-areas: 'title title' 'java  javascript' 'apex  htm' 'css   postgre';
+}
+
+.grid-container .header .java {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: java;
+  margin: auto;
+}
+
+.grid-container .header .java > img {
+  height: 100px;
+  width: 100px;
+}
+
+.grid-container .header .javascript {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: javascript;
+  margin: auto;
+}
+
+.grid-container .header .javascript > img {
+  height: 100px;
+  width: 100px;
+}
+
+.grid-container .header .apex {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: apex;
+  margin: auto;
+}
+
+.grid-container .header .apex > img {
+  height: 100px;
+  width: 100px;
+}
+
+.grid-container .header .htm {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: htm;
+  margin: auto;
+}
+
+.grid-container .header .htm > img {
+  height: 100px;
+  width: 100px;
+}
+
+.grid-container .header .css {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: css;
+  margin: auto;
+}
+
+.grid-container .header .css > img {
+  height: 100px;
+  width: 100px;
+}
+
+.grid-container .header .postgre {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: postgre;
+  margin: auto;
+}
+
+.grid-container .header .postgre > img {
+  height: 100px;
+  width: 100px;
 }
 
 .grid-container .header .title {
-  color: #dad01b;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  margin: auto;
+  color: #13075a;
   font-size: 24px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .grid-container .main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: main;
 }
 

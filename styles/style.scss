@@ -14,19 +14,19 @@ body {
 }
 
 .grid-container {
-    max-width: 700px;
     height: 100vh;
+    width: 70vh;
     margin: auto;
     display: grid;
     grid-template-columns: 3fr 3fr;
-    grid-template-rows   : 1fr 
-                           4fr 
+    grid-template-rows   : 2fr 
+                           2fr 
                            1fr 
                            2fr;
     // gap: 0em;
     grid-template-areas: 
         'header  profile'
-        'main    profile'
+        'header  profile'
         'footer  footer'
         'footer  footer'
     ;
@@ -129,15 +129,73 @@ body {
         }
     }
     .header {
-        background: #0e153a;
         grid-area: header;
-        margin-left : -2em;
-        margin-top  : -2em;
-        padding-top :  3em;
-        padding-left:  3em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows   : 1fr 
+                               2fr 
+                               2fr
+                               2fr;
+        grid-template-areas:
+            'title title'
+            'java  javascript'
+            'apex  htm'
+            'css   postgre';
+        
+        
 
+        .java { 
+            grid-area: java;
+            margin: auto;
+            > img {
+            height: 100px;
+            width: 100px;
+            }
+        }
+        .javascript { 
+            grid-area: javascript;
+            margin: auto;
+            > img {
+            height: 100px;
+            width: 100px;
+        }
+        }
+        .apex { 
+            grid-area: apex;
+            margin: auto;
+            > img {
+            height: 100px;
+            width: 100px;
+        }
+        }
+        .htm { 
+            grid-area: htm;
+            margin: auto;
+            > img {
+            height: 100px;
+            width: 100px;
+        }
+        }
+        .css { 
+            grid-area: css;
+            margin: auto;
+            > img {
+            height: 100px;
+            width: 100px;
+        }
+        }
+        .postgre { 
+            grid-area: postgre;
+            margin: auto;
+            > img {
+            height: 100px;
+            width: 100px;
+        }
+        }
         .title {
-            color: #dad01b;
+            grid-area: title;
+            margin: auto;
+            color: #13075a;
             font-size: 24px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             
